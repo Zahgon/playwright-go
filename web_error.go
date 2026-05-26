@@ -5,17 +5,8 @@ type webErrorImpl struct {
 	page Page
 }
 
-func (e *webErrorImpl) Page() Page {
-	return e.page
-}
+func (e *webErrorImpl) Page() Page { _ = "STUB: not implemented"; return *new(Page) }
 
-func (e *webErrorImpl) Error() error {
-	return e.err
-}
+func (e *webErrorImpl) Error() error { _ = "STUB: not implemented"; return nil }
 
-func newWebError(page Page, err error) WebError {
-	return &webErrorImpl{
-		err:  err,
-		page: page,
-	}
-}
+func newWebError(page Page, err error) WebError { _ = "STUB: not implemented"; return *new(WebError) }

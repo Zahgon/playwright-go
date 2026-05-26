@@ -4,16 +4,10 @@
 package main
 
 import (
-	"log"
-
 	"github.com/playwright-community/playwright-go"
 )
 
-func assertErrorToNilf(message string, err error) {
-	if err != nil {
-		log.Fatalf(message, err)
-	}
-}
+func assertErrorToNilf(message string, err error) { _ = "STUB: not implemented"; return }
 
 func main() {
 	pw, err := playwright.Run()

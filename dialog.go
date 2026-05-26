@@ -5,44 +5,19 @@ type dialogImpl struct {
 	page Page
 }
 
-func (d *dialogImpl) Type() string {
-	return d.initializer["type"].(string)
-}
+func (d *dialogImpl) Type() string { _ = "STUB: not implemented"; return "" }
 
-func (d *dialogImpl) Message() string {
-	return d.initializer["message"].(string)
-}
+func (d *dialogImpl) Message() string { _ = "STUB: not implemented"; return "" }
 
-func (d *dialogImpl) DefaultValue() string {
-	return d.initializer["defaultValue"].(string)
-}
+func (d *dialogImpl) DefaultValue() string { _ = "STUB: not implemented"; return "" }
 
-func (d *dialogImpl) Accept(promptTextInput ...string) error {
-	var promptText *string
-	if len(promptTextInput) == 1 {
-		promptText = &promptTextInput[0]
-	}
-	_, err := d.channel.Send("accept", map[string]any{
-		"promptText": promptText,
-	})
-	return err
-}
+func (d *dialogImpl) Accept(promptTextInput ...string) error { _ = "STUB: not implemented"; return nil }
 
-func (d *dialogImpl) Dismiss() error {
-	_, err := d.channel.Send("dismiss")
-	return err
-}
+func (d *dialogImpl) Dismiss() error { _ = "STUB: not implemented"; return nil }
 
-func (d *dialogImpl) Page() Page {
-	return d.page
-}
+func (d *dialogImpl) Page() Page { _ = "STUB: not implemented"; return *new(Page) }
 
 func newDialog(parent *channelOwner, objectType string, guid string, initializer map[string]any) *dialogImpl {
-	bt := &dialogImpl{}
-	bt.createChannelOwner(bt, parent, objectType, guid, initializer)
-	page := fromNullableChannel(initializer["page"])
-	if page != nil {
-		bt.page = page.(*pageImpl)
-	}
-	return bt
+	_ = "STUB: not implemented"
+	return nil
 }

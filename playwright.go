@@ -26,58 +26,23 @@ type Playwright struct {
 }
 
 // Stop stops the Playwright instance
-func (p *Playwright) Stop() error {
-	return p.connection.Stop()
-}
+func (p *Playwright) Stop() error { _ = "STUB: not implemented"; return nil }
 
 // Pid returns the process ID of the Playwright driver process, or 0 if not available
-func (p *Playwright) Pid() int {
-	if pt, ok := p.connection.transport.(*pipeTransport); ok {
-		if pt.process != nil {
-			return pt.process.Pid
-		}
-	}
-	return 0
-}
+func (p *Playwright) Pid() int { _ = "STUB: not implemented"; return 0 }
 
 func (p *Playwright) setSelectors(selectors Selectors) {
+	_ = "STUB: not implemented"
 	// Selectors has been moved to client-side only in Playwright v1.57+
-	if p.initializer["selectors"] != nil {
-		selectorsOwner := fromChannel(p.initializer["selectors"]).(*selectorsOwnerImpl)
-		p.Selectors.(*selectorsImpl).removeChannel(selectorsOwner)
-		p.Selectors = selectors
-		p.Selectors.(*selectorsImpl).addChannel(selectorsOwner)
-	} else {
-		p.Selectors = selectors
-	}
+	return
 }
 
 func newPlaywright(parent *channelOwner, objectType string, guid string, initializer map[string]any) *Playwright {
-	pw := &Playwright{
-		Selectors: newSelectorsImpl(),
-		Chromium:  fromChannel(initializer["chromium"]).(*browserTypeImpl),
-		Firefox:   fromChannel(initializer["firefox"]).(*browserTypeImpl),
-		WebKit:    fromChannel(initializer["webkit"]).(*browserTypeImpl),
-		Devices:   make(map[string]*DeviceDescriptor),
-	}
-	pw.createChannelOwner(pw, parent, objectType, guid, initializer)
-	pw.Request = newApiRequestImpl(pw)
-	pw.Chromium.(*browserTypeImpl).playwright = pw
-	pw.Firefox.(*browserTypeImpl).playwright = pw
-	pw.WebKit.(*browserTypeImpl).playwright = pw
-	// Selectors has been moved to client-side only in Playwright v1.57+
-	// Only set up channel if selectors is in the initializer (older protocol)
-	if initializer["selectors"] != nil {
-		selectorsOwner := fromChannel(initializer["selectors"]).(*selectorsOwnerImpl)
-		pw.Selectors.(*selectorsImpl).addChannel(selectorsOwner)
-		pw.connection.afterClose = func() {
-			pw.Selectors.(*selectorsImpl).removeChannel(selectorsOwner)
-		}
-	}
-	if pw.connection.localUtils != nil {
-		pw.Devices = pw.connection.localUtils.Devices
-	}
-	return pw
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Selectors has been moved to client-side only in Playwright v1.57+
+// Only set up channel if selectors is in the initializer (older protocol)
 
 //go:generate bash scripts/generate-api.sh

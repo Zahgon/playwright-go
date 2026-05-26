@@ -2,7 +2,6 @@ package playwright
 
 import (
 	"errors"
-	"fmt"
 )
 
 var (
@@ -23,36 +22,12 @@ type Error struct {
 	Stack   string `json:"stack"`
 }
 
-func (e *Error) Error() string {
-	return e.Message
-}
+func (e *Error) Error() string { _ = "STUB: not implemented"; return "" }
 
-func (e *Error) Is(target error) bool {
-	err, ok := target.(*Error)
-	if !ok {
-		return false
-	}
-	if err.Name != e.Name {
-		return false
-	}
-	if e.Name != "Error" {
-		return true // same name and not normal error
-	}
-	return e.Message == err.Message
-}
+func (e *Error) Is(target error) bool { _ = "STUB: not implemented"; return false }
 
-func parseError(err Error) error {
-	if err.Name == "TimeoutError" {
-		return fmt.Errorf("%w: %w: %w", ErrPlaywright, ErrTimeout, &err)
-	} else if err.Name == "TargetClosedError" {
-		return fmt.Errorf("%w: %w: %w", ErrPlaywright, ErrTargetClosed, &err)
-	}
-	return fmt.Errorf("%w: %w", ErrPlaywright, &err)
-}
+// same name and not normal error
 
-func targetClosedError(reason *string) error {
-	if reason == nil {
-		return ErrTargetClosed
-	}
-	return fmt.Errorf("%w: %s", ErrTargetClosed, *reason)
-}
+func parseError(err Error) error { _ = "STUB: not implemented"; return nil }
+
+func targetClosedError(reason *string) error { _ = "STUB: not implemented"; return nil }

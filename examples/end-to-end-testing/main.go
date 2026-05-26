@@ -4,24 +4,12 @@
 package main
 
 import (
-	"fmt"
-	"log"
-	"reflect"
-
 	"github.com/playwright-community/playwright-go"
 )
 
-func assertErrorToNilf(message string, err error) {
-	if err != nil {
-		log.Fatalf(message, err)
-	}
-}
+func assertErrorToNilf(message string, err error) { _ = "STUB: not implemented"; return }
 
-func assertEqual(expected, actual interface{}) {
-	if !reflect.DeepEqual(expected, actual) {
-		panic(fmt.Sprintf("%v does not equal %v", actual, expected))
-	}
-}
+func assertEqual(expected, actual interface{}) { _ = "STUB: not implemented"; return }
 
 const todoName = "Bake a cake"
 

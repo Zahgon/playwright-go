@@ -6,17 +6,14 @@ type fileChooserImpl struct {
 	isMultiple    bool
 }
 
-func (f *fileChooserImpl) Page() Page {
-	return f.page
-}
+func (f *fileChooserImpl) Page() Page { _ = "STUB: not implemented"; return *new(Page) }
 
 func (f *fileChooserImpl) Element() ElementHandle {
-	return f.elementHandle
+	_ = "STUB: not implemented"
+	return *new(ElementHandle)
 }
 
-func (f *fileChooserImpl) IsMultiple() bool {
-	return f.isMultiple
-}
+func (f *fileChooserImpl) IsMultiple() bool { _ = "STUB: not implemented"; return false }
 
 // InputFile represents the input file for:
 // - FileChooser.SetFiles()
@@ -29,16 +26,11 @@ type InputFile struct {
 }
 
 func (f *fileChooserImpl) SetFiles(files any, options ...FileChooserSetFilesOptions) error {
-	if len(options) == 1 {
-		return f.elementHandle.SetInputFiles(files, ElementHandleSetInputFilesOptions(options[0]))
-	}
-	return f.elementHandle.SetInputFiles(files)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func newFileChooser(page Page, elementHandle ElementHandle, isMultiple bool) *fileChooserImpl {
-	return &fileChooserImpl{
-		page:          page,
-		elementHandle: elementHandle,
-		isMultiple:    isMultiple,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }

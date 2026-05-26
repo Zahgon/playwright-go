@@ -1,9 +1,6 @@
 package playwright
 
-func getMixedState(in string) *MixedState {
-	v := MixedState(in)
-	return &v
-}
+func getMixedState(in string) *MixedState { _ = "STUB: not implemented"; return nil }
 
 type MixedState string
 
@@ -13,10 +10,7 @@ var (
 	MixedStateMixed             = getMixedState("Mixed")
 )
 
-func getElementState(in string) *ElementState {
-	v := ElementState(in)
-	return &v
-}
+func getElementState(in string) *ElementState { _ = "STUB: not implemented"; return nil }
 
 type ElementState string
 
@@ -29,10 +23,7 @@ var (
 	ElementStateEditable               = getElementState("editable")
 )
 
-func getAriaRole(in string) *AriaRole {
-	v := AriaRole(in)
-	return &v
-}
+func getAriaRole(in string) *AriaRole { _ = "STUB: not implemented"; return nil }
 
 type AriaRole string
 
@@ -121,10 +112,7 @@ var (
 	AriaRoleTreeitem                   = getAriaRole("treeitem")
 )
 
-func getColorScheme(in string) *ColorScheme {
-	v := ColorScheme(in)
-	return &v
-}
+func getColorScheme(in string) *ColorScheme { _ = "STUB: not implemented"; return nil }
 
 type ColorScheme string
 
@@ -135,10 +123,7 @@ var (
 	ColorSchemeNoOverride                = getColorScheme("no-override")
 )
 
-func getForcedColors(in string) *ForcedColors {
-	v := ForcedColors(in)
-	return &v
-}
+func getForcedColors(in string) *ForcedColors { _ = "STUB: not implemented"; return nil }
 
 type ForcedColors string
 
@@ -148,10 +133,7 @@ var (
 	ForcedColorsNoOverride               = getForcedColors("no-override")
 )
 
-func getHarContentPolicy(in string) *HarContentPolicy {
-	v := HarContentPolicy(in)
-	return &v
-}
+func getHarContentPolicy(in string) *HarContentPolicy { _ = "STUB: not implemented"; return nil }
 
 type HarContentPolicy string
 
@@ -161,10 +143,7 @@ var (
 	HarContentPolicyAttach                   = getHarContentPolicy("attach")
 )
 
-func getHarMode(in string) *HarMode {
-	v := HarMode(in)
-	return &v
-}
+func getHarMode(in string) *HarMode { _ = "STUB: not implemented"; return nil }
 
 type HarMode string
 
@@ -173,10 +152,7 @@ var (
 	HarModeMinimal          = getHarMode("minimal")
 )
 
-func getReducedMotion(in string) *ReducedMotion {
-	v := ReducedMotion(in)
-	return &v
-}
+func getReducedMotion(in string) *ReducedMotion { _ = "STUB: not implemented"; return nil }
 
 type ReducedMotion string
 
@@ -186,10 +162,7 @@ var (
 	ReducedMotionNoOverride                  = getReducedMotion("no-override")
 )
 
-func getServiceWorkerPolicy(in string) *ServiceWorkerPolicy {
-	v := ServiceWorkerPolicy(in)
-	return &v
-}
+func getServiceWorkerPolicy(in string) *ServiceWorkerPolicy { _ = "STUB: not implemented"; return nil }
 
 type ServiceWorkerPolicy string
 
@@ -198,10 +171,7 @@ var (
 	ServiceWorkerPolicyBlock                      = getServiceWorkerPolicy("block")
 )
 
-func getSameSiteAttribute(in string) *SameSiteAttribute {
-	v := SameSiteAttribute(in)
-	return &v
-}
+func getSameSiteAttribute(in string) *SameSiteAttribute { _ = "STUB: not implemented"; return nil }
 
 type SameSiteAttribute string
 
@@ -211,10 +181,7 @@ var (
 	SameSiteAttributeNone                      = getSameSiteAttribute("None")
 )
 
-func getHarNotFound(in string) *HarNotFound {
-	v := HarNotFound(in)
-	return &v
-}
+func getHarNotFound(in string) *HarNotFound { _ = "STUB: not implemented"; return nil }
 
 type HarNotFound string
 
@@ -224,8 +191,8 @@ var (
 )
 
 func getRouteFromHarUpdateContentPolicy(in string) *RouteFromHarUpdateContentPolicy {
-	v := RouteFromHarUpdateContentPolicy(in)
-	return &v
+	_ = "STUB: not implemented"
+	return nil
 }
 
 type RouteFromHarUpdateContentPolicy string
@@ -235,10 +202,7 @@ var (
 	RouteFromHarUpdateContentPolicyAttach                                  = getRouteFromHarUpdateContentPolicy("attach")
 )
 
-func getUnrouteBehavior(in string) *UnrouteBehavior {
-	v := UnrouteBehavior(in)
-	return &v
-}
+func getUnrouteBehavior(in string) *UnrouteBehavior { _ = "STUB: not implemented"; return nil }
 
 type UnrouteBehavior string
 
@@ -248,10 +212,7 @@ var (
 	UnrouteBehaviorDefault                       = getUnrouteBehavior("default")
 )
 
-func getMouseButton(in string) *MouseButton {
-	v := MouseButton(in)
-	return &v
-}
+func getMouseButton(in string) *MouseButton { _ = "STUB: not implemented"; return nil }
 
 type MouseButton string
 
@@ -261,10 +222,7 @@ var (
 	MouseButtonMiddle              = getMouseButton("middle")
 )
 
-func getKeyboardModifier(in string) *KeyboardModifier {
-	v := KeyboardModifier(in)
-	return &v
-}
+func getKeyboardModifier(in string) *KeyboardModifier { _ = "STUB: not implemented"; return nil }
 
 type KeyboardModifier string
 
@@ -277,8 +235,8 @@ var (
 )
 
 func getScreenshotAnimations(in string) *ScreenshotAnimations {
-	v := ScreenshotAnimations(in)
-	return &v
+	_ = "STUB: not implemented"
+	return nil
 }
 
 type ScreenshotAnimations string
@@ -288,10 +246,7 @@ var (
 	ScreenshotAnimationsAllow                          = getScreenshotAnimations("allow")
 )
 
-func getScreenshotCaret(in string) *ScreenshotCaret {
-	v := ScreenshotCaret(in)
-	return &v
-}
+func getScreenshotCaret(in string) *ScreenshotCaret { _ = "STUB: not implemented"; return nil }
 
 type ScreenshotCaret string
 
@@ -300,10 +255,7 @@ var (
 	ScreenshotCaretInitial                  = getScreenshotCaret("initial")
 )
 
-func getScreenshotScale(in string) *ScreenshotScale {
-	v := ScreenshotScale(in)
-	return &v
-}
+func getScreenshotScale(in string) *ScreenshotScale { _ = "STUB: not implemented"; return nil }
 
 type ScreenshotScale string
 
@@ -312,10 +264,7 @@ var (
 	ScreenshotScaleDevice                  = getScreenshotScale("device")
 )
 
-func getScreenshotType(in string) *ScreenshotType {
-	v := ScreenshotType(in)
-	return &v
-}
+func getScreenshotType(in string) *ScreenshotType { _ = "STUB: not implemented"; return nil }
 
 type ScreenshotType string
 
@@ -325,8 +274,8 @@ var (
 )
 
 func getWaitForSelectorState(in string) *WaitForSelectorState {
-	v := WaitForSelectorState(in)
-	return &v
+	_ = "STUB: not implemented"
+	return nil
 }
 
 type WaitForSelectorState string
@@ -338,10 +287,7 @@ var (
 	WaitForSelectorStateHidden                         = getWaitForSelectorState("hidden")
 )
 
-func getWaitUntilState(in string) *WaitUntilState {
-	v := WaitUntilState(in)
-	return &v
-}
+func getWaitUntilState(in string) *WaitUntilState { _ = "STUB: not implemented"; return nil }
 
 type WaitUntilState string
 
@@ -352,10 +298,7 @@ var (
 	WaitUntilStateCommit                           = getWaitUntilState("commit")
 )
 
-func getLoadState(in string) *LoadState {
-	v := LoadState(in)
-	return &v
-}
+func getLoadState(in string) *LoadState { _ = "STUB: not implemented"; return nil }
 
 type LoadState string
 
@@ -365,10 +308,7 @@ var (
 	LoadStateNetworkidle                 = getLoadState("networkidle")
 )
 
-func getContrast(in string) *Contrast {
-	v := Contrast(in)
-	return &v
-}
+func getContrast(in string) *Contrast { _ = "STUB: not implemented"; return nil }
 
 type Contrast string
 
@@ -378,10 +318,7 @@ var (
 	ContrastNoOverride             = getContrast("no-override")
 )
 
-func getMedia(in string) *Media {
-	v := Media(in)
-	return &v
-}
+func getMedia(in string) *Media { _ = "STUB: not implemented"; return nil }
 
 type Media string
 
@@ -391,10 +328,7 @@ var (
 	MediaNoOverride        = getMedia("no-override")
 )
 
-func getHttpCredentialsSend(in string) *HttpCredentialsSend {
-	v := HttpCredentialsSend(in)
-	return &v
-}
+func getHttpCredentialsSend(in string) *HttpCredentialsSend { _ = "STUB: not implemented"; return nil }
 
 type HttpCredentialsSend string
 
